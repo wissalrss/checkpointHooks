@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Card, Button } from 'react-bootstrap';
-
+import {Link} from "react-router-dom";
 const  MovieCard = (props) =>{
     return(
         <>
@@ -12,7 +12,7 @@ const  MovieCard = (props) =>{
                 <Card.Text>
                 {props.itemMovie.description}
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button><br/>
+                <Link to={{pathname:`/description/${props.itemMovie.id}`,params: props.itemM}}>Description</Link><br/>
                 {props.itemMovie.rating} 
             </Card.Body>
             </Card>
